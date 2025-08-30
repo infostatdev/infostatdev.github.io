@@ -1,0 +1,39 @@
+---
+title: "infostatdev.github.io"
+format:
+  html:
+   code-tools: true
+   code-fod: true
+---
+
+## Quarto
+
+```{r}
+renv::init()
+```
+
+
+```{r}
+install.packages("dplyr")
+install.packages("ggplot2")
+```
+
+### Data analysis
+```{r}
+data(mtcars)
+```
+
+
+```{r}
+df <- mtcars
+head(df, 10)
+str(df)
+```
+
+## Visualisation des données 
+
+```{r}
+library("ggplot2")
+ggplot(df)+geom_histogram(aes(x=df$disp))
+```
+
