@@ -13,10 +13,21 @@ renv::init()
 ```
 
 
+```{r}
+renv::install("dplyr")
+renv::install("ggplot2")
+```
+
 
 ```{r}
-install.packages("dplyr")
-install.packages("ggplot2")
+#renv::update()
+#renv::snapshot()
+```
+
+## Installation des packages
+```{r}
+#install.packages("dplyr")
+#install.packages("ggplot2")
 ```
 
 ### Data analysis
