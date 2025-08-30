@@ -113,7 +113,7 @@ These packages will be installed into "C:/Users/ACER/Desktop/infostatdev.github.
 
 # Installing packages --------------------------------------------------------
 - Installing dplyr ...                          OK [linked from cache]
-Successfully installed 1 package in 64 milliseconds.</code></pre>
+Successfully installed 1 package in 88 milliseconds.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -123,7 +123,7 @@ These packages will be installed into "C:/Users/ACER/Desktop/infostatdev.github.
 
 # Installing packages --------------------------------------------------------
 - Installing ggplot2 ...                        OK [linked from cache]
-Successfully installed 1 package in 51 milliseconds.</code></pre>
+Successfully installed 1 package in 73 milliseconds.</code></pre>
 </div>
 </div>
 <section id="data-analysis" class="level3">
@@ -644,29 +644,30 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data analysis</span></span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data analysis</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> mtcars</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df, <span class="dv">10</span>)</span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualisation des données </span></span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df)<span class="sc">+</span><span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span>df<span class="sc">$</span>disp))</span>
-<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df, <span class="dv">10</span>)</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualisation des données </span></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df)<span class="sc">+</span><span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span>df<span class="sc">$</span>disp))</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
